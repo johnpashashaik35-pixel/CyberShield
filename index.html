@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield | Security Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand"><span>🛡️</span> CyberShield</div>
+        <div class="status"><span class="dot"></span> Security Center</div>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <p class="eyebrow">PERSONAL SECURITY CENTER</p>
+            <h1>Stay Safe in the <span>Digital World.</span></h1>
+            <p>Simple tools to help you check passwords, inspect URLs, and verify file integrity.</p>
+        </section>
+
+        <section class="summary">
+            <div class="summary-card">
+                <span class="summary-icon">🛡️</span>
+                <p>Security Tools</p>
+                <h2>03</h2>
+            </div>
+            <div class="summary-card">
+                <span class="summary-icon">🔐</span>
+                <p>Password Checker</p>
+                <h2>Ready</h2>
+            </div>
+            <div class="summary-card">
+                <span class="summary-icon">🔎</span>
+                <p>URL Analyzer</p>
+                <h2>Ready</h2>
+            </div>
+        </section>
+
+        <section class="tools-section">
+            <div class="section-heading">
+                <p class="eyebrow">YOUR TOOLKIT</p>
+                <h2>Security Tools</h2>
+            </div>
+
+            <div class="tools-grid">
+                <article class="tool-card">
+                    <div class="tool-icon">🔐</div>
+                    <h3>Password Strength</h3>
+                    <p>Check password strength using basic security rules.</p>
+                    <label for="password">Enter a test password</label>
+                    <input id="password" type="password" placeholder="Type a sample password" autocomplete="off">
+                    <button type="button" id="checkPassword">Check Strength</button>
+                    <p id="passwordResult" class="result" aria-live="polite">Your result will appear here.</p>
+                    <small>Use a sample password, never your real password.</small>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">🔎</div>
+                    <h3>URL Safety Check</h3>
+                    <p>Look for suspicious URL patterns. This is a basic heuristic, not a definitive safety verdict.</p>
+                    <label for="url">Enter a URL</label>
+                    <input id="url" type="text" placeholder="https://example.com">
+                    <button type="button" id="checkUrl">Analyze URL</button>
+                    <p id="urlResult" class="result" aria-live="polite">Your result will appear here.</p>
+                    <small>Do not open suspicious links.</small>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">🧾</div>
+                    <h3>File Integrity</h3>
+                    <p>Generate a SHA-256 hash for a file and compare it with a trusted hash.</p>
+                    <label for="file">Choose a file</label>
+                    <input id="file" type="file">
+                    <button type="button" id="hashFile">Generate SHA-256</button>
+                    <p id="fileResult" class="result" aria-live="polite">Your hash will appear here.</p>
+                    <small>Files are processed in your browser.</small>
+                </article>
+            </div>
+        </section>
+
+        <section class="tips">
+            <p class="eyebrow">SECURITY BASICS</p>
+            <h2>Three habits that help protect you</h2>
+            <ul>
+                <li>Use unique passwords and a trusted password manager.</li>
+                <li>Enable multi-factor authentication whenever possible.</li>
+                <li>Verify website addresses before entering sensitive information.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>CyberShield · Educational cybersecurity project</p>
+        <p>Basic checks only — results are not a guarantee of security.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
